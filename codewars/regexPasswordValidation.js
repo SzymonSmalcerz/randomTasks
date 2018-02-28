@@ -15,7 +15,7 @@ Valid passwords will only be alphanumeric characters.
 
 
 function validate(password) {
-  if(password.length >= 6 && /[a-z]/.test(password) && /[A-Z]/.test(password) && /\d/.test(password)){return true}
+  if(password.length > 6 && !(/[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) && /[a-z]/.test(password) && /[A-Z]/.test(password) && /\d/.test(password)){return true}
   
   return false;
 }
