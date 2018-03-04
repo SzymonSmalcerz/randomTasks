@@ -4,6 +4,19 @@
 
 /*
 
+Write function avg which calculates average of numbers in given list.
+
+*/
+
+function find_average(array) {
+  return array.reduce((total,val) => total+val,0)/array.length;
+}
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
 Given an array of integers.
 
 Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
@@ -30,6 +43,41 @@ function countPositivesSumNegatives(input) {
       val > 0 ? arr[0] += 1 : arr[1] += val;
       return arr;
     } ,[0,0]) : [];
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/*
+
+This is a beginner friendly kata especially for UFC/MMA fans.
+
+It's a fight between the two legends: Conor McGregor vs George Saint Pierre in Madison Square Garden. Only one fighter will remain standing, and after the fight in an interview with Joe Rogan the winner will make his legendary statement. It's your job to return the right statement depending on the winner!
+
+If the winner is George Saint Pierre he will obviously say:
+
+"I am not impressed by your performance."
+If the winner is Conor McGregor he will most undoubtedly say:
+
+"I'd like to take this chance to apologize.. To absolutely NOBODY!"
+Good Luck!
+
+*/
+
+
+var quote = function(fighter) {
+  return fighter.toUpperCase() == "george saint pierre".toUpperCase() ? "I am not impressed by your performance." : "I'd like to take this chance to apologize.. To absolutely NOBODY!";
+};
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+*/
+
+function even_or_odd(number) {
+  return number % 2 === 0 ? "Even" : "Odd";
 }
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -137,6 +185,19 @@ Good Luck!
 var quote = function(fighter) {
   return fighter.toUpperCase() == "george saint pierre".toUpperCase() ? "I am not impressed by your performance." : "I'd like to take this chance to apologize.. To absolutely NOBODY!";
 };
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+*/
+
+function even_or_odd(number) {
+  return number % 2 === 0 ? "Even" : "Odd";
+}
 
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
