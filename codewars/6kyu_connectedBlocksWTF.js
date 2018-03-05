@@ -2,6 +2,7 @@
 
 
  @@this challenge raped me@@
+ @@ UPDATE -> challenge now raped by me :DD, new solution after some time :3@@
 
  Given a 10x10 grid of 100 cells, with columns indexed 0 to 9 (left to right) and rows indexed 0 to 9 (bottom to top). The input of your program will be a comma-separated string of cell identifiers, identifyng the cells that are coloured black. Each cell identifier is a two digit number of the form <column_index><row_index>.
 
@@ -19,6 +20,54 @@ For example: 00,00,111,1,1a is the same as 00
 
 
 */
+
+//NEW SOLUTION : (OLD BELOW NEW)
+function solution(input) {
+  input = input.split(",").map(val => val.length == 2 && (parseInt(val) || val === "00") ? parseInt(val) : -1).filter((val,index,arr) => val >= 0 && index == arr.lastIndexOf(val)).sort((a,b) => a-b); 
+  
+  //console.log(input); //uncomment to see what I did
+  
+  var max = 0;
+  while(input.length > 0){
+    
+    let temp = getMaxBlockStartingFrom(input,input[0],input[0]);
+    max = max >= temp ? max : temp;
+  }
+  return max;
+}
+
+// input -> our array :)
+// value -> :)
+// id    -> just to console log our id and it clarifies a little bit more
+function getMaxBlockStartingFrom(input,value,id){//recursive function, we want to reach as far as possible from starting point and count moves
+  
+  var indexOfValue = input.indexOf(value);
+  if(indexOfValue !== -1){
+//     console.log(value + "  | move id: " + id) //uncomment to see how this function work :)
+    var res = 1;                                 //minimum one element in block => starting value
+    input.splice(indexOfValue,1);                //remove element from table, this element is already counted to final res
+    var initialInput = input.slice();
+    if((value%10)%10 !== 0){//we cant go left if value is for example = 10 because 11 is not on the left side of 10 :)
+      res += getMaxBlockStartingFrom(input,value-1,id);//go left
+    }
+    if(value%10 == 0 || (value%10)%9 !== 0){//we cant go right if value is for example = 19 because 20 is not on the right side of 19 :)
+      res += getMaxBlockStartingFrom(input,value+1,id);//go right
+    }
+    //when we go up and down ve dont need to check anything, our initial condition of this function will verify if value if for example 99
+    //and will just not find this value
+    res += getMaxBlockStartingFrom(input,value-10,id);//go up
+    res += getMaxBlockStartingFrom(input,value+10,id);//go down
+  
+    return res;
+  }
+  
+  return 0;
+}
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+//OLD SOLUTION :
 
 function solution(input) {
   var helperArr = [];
