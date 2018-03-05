@@ -1,0 +1,137 @@
+/*
+
+
+ @@this challenge raped me@@
+
+ Given a 10x10 grid of 100 cells, with columns indexed 0 to 9 (left to right) and rows indexed 0 to 9 (bottom to top). The input of your program will be a comma-separated string of cell identifiers, identifyng the cells that are coloured black. Each cell identifier is a two digit number of the form <column_index><row_index>.
+
+For example, an input of 18,00,95,40,36,26,57,48,54,65,76,87,97,47 represents the following grid:
+
+https://www.codewars.com/kata/connected-blocks/train/javascript for picture
+
+When given this input, your program should output the size of the largest block of connected black cells, witch is outlined in red in the example above. So in this case your program would return 3.
+
+Note that two black cells are considered to be connected if they share an edge, but they are not connected if the share only a corner.
+
+The input could have some cells with invalid format or repeated cells that should not be taken into account.
+
+For example: 00,00,111,1,1a is the same as 00
+
+
+*/
+
+function solution(input) {
+  var helperArr = [];
+  var error = false;
+  input = input.split(",").forEach(val => {
+    
+    if(val.length != 2){
+      return;
+    } else if(!parseInt(val) && val != "00"){
+      error = true;
+      return;
+    }
+    helperArr[parseInt(val)] = 1;
+  
+  });
+  
+  if(error){return 0}
+  var arrOfObj = [];
+  
+  for(let k=0;k<10;k++){
+    for(let w=0;w<=9;w++){
+      
+      let index = k*10+w;
+      
+      if(helperArr[index]){
+        var obj = {};
+        obj.arr = [];
+        obj.arr.push(index);
+        helperArr[index] = obj;
+        if(w==9){
+          arrOfObj.push(obj);
+          break;
+        }
+        while(helperArr[index+1] && w<9){
+          index+=1;
+          w+=1;
+          helperArr[index] = obj;
+          obj.arr.push(index);
+        }
+        arrOfObj.push(obj);
+      }
+    }
+  }
+  
+  arrOfObj.forEach(object => {
+    console.log(object.arr);
+    for (var property in object) {
+      
+      if (object.hasOwnProperty(property)) {
+          object.neighbours = [];
+          for(let i=0;i<object.arr.length;i++){
+          let neighbour = helperArr[object.arr[i] - 10];
+            if(neighbour){
+              
+              
+              if(object.neighbours.indexOf(neighbour) == -1){
+                
+                object.neighbours.forEach(nei => {
+                  if(nei.neighbours.indexOf(neighbour) == -1){
+                    nei.neighbours.push(neighbour);
+                    neighbour.neighbours.push(nei);
+                  }
+                });
+                object.neighbours.push(neighbour);
+                for(let j=0;j<neighbour.neighbours.length;j++){
+                  if(object.neighbours.indexOf(neighbour.neighbours[j]) == -1){
+                    
+                    object.neighbours.push(neighbour.neighbours[j]);
+                    
+                    let neighbourOfNeighbour = neighbour.neighbours[j];
+                    for(let s=0;s<neighbourOfNeighbour.neighbours.length;s++){
+                        var XD = neighbourOfNeighbour.neighbours[s];
+                        
+                        object.neighbours.forEach(nei => {
+                          if(XD.neighbours.indexOf(nei) == -1){
+                            console.log(object.arr + " XDXDXD");
+                            XD.neighbours.push(nei);
+                            nei.neighbours.push(XD);
+                          }
+                        });
+                    }
+                    neighbourOfNeighbour.neighbours.push(object);
+                  }
+                };
+                
+                neighbour.neighbours.push(object);
+                
+                
+              }
+            }
+          }
+          
+      }
+    }
+  })
+  
+  return (arrOfObj.reduce((total,obj) => {
+    obj.val = obj.arr.length + obj.neighbours.filter((val,index,arr) => arr.lastIndexOf(val) == index && val !== obj).reduce((total,val) => total + val.arr.length ,0);
+    
+    if( total>obj.val ){
+      return total;
+    } else {
+    console.log("XDDDDDDD");
+    obj.neighbours = obj.neighbours.sort((a,b) => a.arr[0] - b.arr[0]).forEach(val => {console.log(val.arr)});
+    console.log(obj.arr);
+      return obj.val;
+    }
+  },0));
+
+  
+  
+  
+}
+  
+
+
