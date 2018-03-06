@@ -78,6 +78,24 @@ function countPositivesSumNegatives(input) {
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 /*
 
+
+Given an integral number of watermelons w (1 ≤ w ≤ 100; 1 ≤ w in Haskell), check whether Pete and Billy can divide the melons so that each of them gets an even amount.
+
+Examples
+divide(2) === false // 2 = 1 + 1
+divide(3) === false // 3 = 1 + 2
+divide(4) === true  // 4 = 2 + 2
+divide(5) === false // 5 = 2 + 3
+divide(6) === true  // 6 = 2 + 4
+
+
+*/
+function divide(weight){
+  return weight>2 && (weight-2)%2 == 0 ? true : false;
+}
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/*
+
 This is a beginner friendly kata especially for UFC/MMA fans.
 
 It's a fight between the two legends: Conor McGregor vs George Saint Pierre in Madison Square Garden. Only one fighter will remain standing, and after the fight in an interview with Joe Rogan the winner will make his legendary statement. It's your job to return the right statement depending on the winner!
