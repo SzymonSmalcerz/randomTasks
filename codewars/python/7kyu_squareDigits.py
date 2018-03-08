@@ -11,8 +11,9 @@
 
 import math
 def square_digits(num):
-    res = ""
+    res = []
     while num>0:
-        res += str((num%10)**2)
+        res.append(str((num%10)**2))
         num = math.floor(num/10)
-    return int(res)
+    
+    return int("".join(res[::-1]))
