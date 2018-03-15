@@ -30,7 +30,81 @@ function basicOp(operation, value1, value2)
         return value1 + value2;
   }
 }
+
+
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	return string with every character repeated twice (for example : "simon" => "ssiimmoonn")
+
+*/
+
+function doubleChar(str) {
+  return str.split("").map(char => char+char).join("");
+}
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/*
+
+	Consider an array of sheep where some sheep may be missing from their place. 
+	We need a function that counts the number of sheep present in the array (true means present).
+
+	For example,
+
+	[true,  true,  true,  false,
+	  true,  true,  true,  true ,
+	  true,  false, true,  false,
+	  true,  false, false, true ,
+	  true,  true,  true,  true ,
+	  false, false, true,  true]
+	The correct answer would be 17.
+
+	Hint: Don't forget to check for bad values like null/undefined
+
+*/
+
+function countSheeps(arrayOfSheep) {
+  return arrayOfSheep.reduce((total,val) => val ? total + val : total,0);
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+/*
+
+According to the creation myths of the Abrahamic religions, Adam and Eva were the first Humans to wander the earth.
+
+You have to do God’s job. The creation method must return an array of length 2 containing objects representing Adam and Eva. The first object in the array should be an instance of the class Man. The second should be an instance of the class Woman. Both objects have to be subclasses of Human. Your job is to implement the Human, Man and Woman classes.
+
+*/
+
+class God{
+/**
+ * @returns Human[]
+ */
+  static create(){
+    return [new Man(),new Woman()]
+  }
+}
+// code
+
+class Human {
+  constructor(){}
+}
+class Man extends Human{
+  constructor(){
+    super()
+  }
+}
+class Woman extends Human{
+  constructor(){
+    super()
+  }
+}
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 
 /*
 
