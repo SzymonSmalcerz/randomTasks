@@ -30,7 +30,33 @@ function basicOp(operation, value1, value2)
         return value1 + value2;
   }
 }
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+/*
+	You have to return the digits of this number within an array in reverse order.
+
+	Example:
+
+	348597 => [7,9,5,8,4,3]
+*/
+
+
+function digitize(n) {
+  return n.toString().split("").reverse().map(val => parseInt(val))
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+	If the number has an integer square root, take this, otherwise square the number.
+
+	[4,3,9,7,2,1] -> [2,9,3,49,4,1]
+*/
+
+
+function squareOrSquareRoot(array) {
+  return array.map(val => Math.floor(Math.sqrt(val)) == Math.sqrt(val) ? Math.sqrt(val) : Math.pow(val,2))
+}
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
