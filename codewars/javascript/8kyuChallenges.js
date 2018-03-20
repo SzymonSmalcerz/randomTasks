@@ -84,6 +84,40 @@ function doubleChar(str) {
   return str.split("").map(char => char+char).join("");
 }
 
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+*/
+
+function fakeBin(x){
+  return x.split("").map(val => parseInt(val) < 5 ? 0 : 1).join("");
+}
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	Clock shows 'h' hours, 'm' minutes and 's' seconds after midnight.
+
+	Your task is to make 'Past' function which returns time converted to miliseconds.
+
+	#####Example:
+
+	past(0, 1, 1) == 61000
+	Note! h, m and s will be only Natural numbers! Waiting for translations and Feedback! Thanks!
+
+*/
+
+function past(h, m, s){
+  return s * 1000 + m * 60 * 1000 + h * 60 * 60 * 1000
+}
+
+
+
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 /*
