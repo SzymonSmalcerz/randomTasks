@@ -1,35 +1,6 @@
 //just kind of too small and often too easy to give them own file
 
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-/*
-
-Your task is to create a function - basic_op().
-
-The function should take three arguments - operation(string/char), value1(number), value2(number). The function should return result of numbers after applying the chosen operation.
-
-Examples:
-
-basicOp('+', 4, 7)         // Output: 11
-basicOp('-', 15, 18)       // Output: -3
-basicOp('*', 5, 5)         // Output: 25
-basicOp('/', 49, 7)        // Output: 7
-
-*/
-
-function basicOp(operation, value1, value2)
-{
-  switch(operation) {
-    case "*":
-        return value1 * value2;
-    case "/":
-        return value1 / value2;
-    case "-":
-        return value1 - value2;
-    default:
-        return value1 + value2;
-  }
-}
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 /*
@@ -96,6 +67,27 @@ function fakeBin(x){
   return x.split("").map(val => parseInt(val) < 5 ? 0 : 1).join("");
 }
 
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	It's bonus time in the big city! The fatcats are rubbing their paws in anticipation... but who is going to make the most money?
+
+	Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.
+
+	If bonus is true, the salary should be multiplied by 10. If bonus is false, 
+	the fatcat did not make enough money and must receive only his stated salary.
+
+	Return the total figure the individual will receive as a string prefixed with 
+	"£" (= "\u00A3", JS and Java) or "$" (C#, C++, Ruby, Clojure, Elixir, PHP and Python).
+
+
+
+*/
+
+function bonusTime(salary, bonus) {
+  return bonus ? "£" + (salary * 10) : "£" + salary;
+}
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -243,6 +235,21 @@ function countPositivesSumNegatives(input) {
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 /*
 
+	Write a function called repeatStr which repeats the given string string exactly n times.
+
+	repeatStr(6, "I") // "IIIIII"
+	repeatStr(5, "Hello") // "HelloHelloHelloHelloHello"
+
+
+*/
+
+function repeatStr (n, s) {
+  return s.repeat(n)
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+/*
+
 
 Given an integral number of watermelons w (1 ≤ w ≤ 100; 1 ≤ w in Haskell), check whether Pete and Billy can divide the melons so that each of them gets an even amount.
 
@@ -257,6 +264,38 @@ divide(6) === true  // 6 = 2 + 4
 */
 function divide(weight){
   return weight>2 && (weight-2)%2 == 0 ? true : false;
+}
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+Your task is to create a function - basic_op().
+
+The function should take three arguments - operation(string/char), value1(number), value2(number). The function should return result of numbers after applying the chosen operation.
+
+Examples:
+
+basicOp('+', 4, 7)         // Output: 11
+basicOp('-', 15, 18)       // Output: -3
+basicOp('*', 5, 5)         // Output: 25
+basicOp('/', 49, 7)        // Output: 7
+
+*/
+
+function basicOp(operation, value1, value2)
+{
+  switch(operation) {
+    case "*":
+        return value1 * value2;
+    case "/":
+        return value1 / value2;
+    case "-":
+        return value1 - value2;
+    default:
+        return value1 + value2;
+  }
 }
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 /*
