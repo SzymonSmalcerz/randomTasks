@@ -31,6 +31,28 @@ function squareOrSquareRoot(array) {
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 /*
+
+	In this kata you will have to write a function called fuelPrice 
+	(fuel_price in PHP, Python) that takes litres and pricePerLiter as arguments. 
+	Purchases of 2 or more litres get a discount of 5 cents per litre, purchases 
+	of 4 or more litres get a discount of 10 cents per litre, and so on every two 
+	litres, up to a maximum discount of 25 cents per litre. But total discount 
+	per liter cannot be more than 25 cents. round answer to 2 decimal places. 
+	Also you can guess that there will not be negative or non-numeric inputs.
+
+	!Good Luck!
+
+*/
+
+
+
+function fuelPrice(li, pp) {
+  return Number((li * (pp - Math.min(0.25,(Math.floor(li/2) * 0.05)))).toFixed(2))
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
 	You get an array of numbers, return the sum of all of the positives ones.
 
 	Example [1,-4,7,12] => 1 + 7 + 12 = 20
@@ -41,6 +63,30 @@ function squareOrSquareRoot(array) {
 
 function positiveSum(arr) {
   return arr.reduce((total,val) => val > 0 ? val + total : total,0)
+}
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+	Description:
+	Remove a exclamation mark from the end of string. For a beginner kata, 
+	you can assume that the input data is always a string, no need to verify it.
+
+	Examples
+	remove("Hi!") === "Hi"
+	remove("Hi!!!") === "Hi!!"
+	remove("!Hi") === "!Hi"
+	remove("!Hi!") === "!Hi"
+	remove("Hi! Hi!") === "Hi! Hi"
+	remove("Hi") === "Hi"
+	Note
+	Please don't post issue about difficulty or duplicate.
+*/
+
+
+function remove(s){
+  return s[s.length -1] === "!" ? s.slice(0,s.length - 1) : s;
 }
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
