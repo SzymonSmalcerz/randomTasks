@@ -105,6 +105,22 @@ function doubleChar(str) {
 
 /*
 
+	1st (1)   2nd (3)    3rd (6)
+	*          **        ***
+    	           *         **
+                      	     *
+*/
+
+// Return the nth triangular number
+function triangular( n ) {
+  return n <= 0 ? 0 : n + triangular(n-1)
+}
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
 	Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 
 */
