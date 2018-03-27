@@ -1,5 +1,39 @@
 //just kind of too small and often too easy to give them own file
 
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+	You take your son to the forest to see the monkeys. 
+	You know that there are a certain number there (n), 
+	but your son is too young to just appreciate the full number, 
+	he has to start counting them from 1.
+
+	As a good parent, you will sit and count with him. 
+	Given the number (n), populate an array with all 
+	numbers up to and including that number, but excluding zero.
+
+	For example, if n = 10:
+
+	return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+*/
+
+
+function monkeyCount(n) {
+  return Array.apply(null, {length: n+1}).map(Number.call, Number).slice(1);
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+	altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+	Define to_alternating_case(char*) such that each lowercase 
+	letter becomes uppercase and each uppercase letter becomes lowercase.
+*/
+
+
+String.prototype.toAlternatingCase = function () {
+  return this.split("").map(val => val.toUpperCase() == val ? val.toLowerCase() : val.toUpperCase()).join("");
+}
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
@@ -49,6 +83,32 @@ function squareOrSquareRoot(array) {
 function fuelPrice(li, pp) {
   return Number((li * (pp - Math.min(0.25,(Math.floor(li/2) * 0.05)))).toFixed(2))
 }
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	Write a function that takes an array of strings as an argument 
+	and returns a sorted array containing the same strings, ordered from shortest to longest.
+
+	For example, if this array were passed as an argument:
+
+	["Telescopes", "Glasses", "Eyes", "Monocles"]
+
+	Your function would return the following array:
+
+	["Eyes", "Glasses", "Monocles", "Telescopes"]
+
+	All of the strings in the array passed to your function will be different lengths, 
+	so you will not have to decide how to order multiple strings of the same length.
+
+*/
+
+
+
+function sortByLength (array) {
+  return array.sort((a,b) => a.length - b.length)
+};
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
