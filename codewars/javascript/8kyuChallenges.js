@@ -83,6 +83,39 @@ function squareOrSquareRoot(array) {
 function fuelPrice(li, pp) {
   return Number((li * (pp - Math.min(0.25,(Math.floor(li/2) * 0.05)))).toFixed(2))
 }
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	Rock Paper Scissors
+	Let's play! You have to return which player won! In case of a draw return Draw!.
+
+	Examples:
+
+	rps('scissors','paper') // Player 1 won!
+	rps('scissors','rock') // Player 2 won!
+	rps('paper','paper') // Draw!
+
+*/
+
+
+
+const getMsg = (n) => `Player ${n} won!`;
+const obj ={
+  'scissorspaper'       : getMsg(1),
+  'rockscissors'        : getMsg(1),
+  'paperrock'           : getMsg(1),
+  'paperscissors'       : getMsg(2),
+  'scissorsrock'        : getMsg(2),
+  'rockpaper'           : getMsg(2),
+  'paperpaper'          : "Draw!",
+  'rockrock'            : "Draw!",
+  'scissorsscissors'    : "Draw!",
+}
+const rps = (p1, p2) => {
+  return obj[p1+p2]
+};
+
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
