@@ -17,39 +17,24 @@
 
 
 function getMinBase (number) {
-  let arr = getDivisorsArr(number -1);
-  for(let i=1;i<arr.length;i++){
-      if(checkIfInNBaseOnlyOnes(number,arr[i])){
-        return arr[i]
-      }
+  let n = number-1;
+  let srqtN = Math.sqrt(n);
+  for(let i=2;i<=srqtN;i+=1){
+    if(n%i == 0 && checkIfInNBaseOnlyOnes(number,i)){
+      return i
+    }
   }
+  return number-1;
 }
 
 function checkIfInNBaseOnlyOnes(number,n){
-  let mustBeOne;
   while(number>0){
-    mustBeOne = (number%n);
-    if(mustBeOne != 1){return false;}
-    number -= 1
-    number /= n;
+    if((number%n) != 1){return false;}
+    number = (number-1)/n;
   }
   return true
 }
 
-function getDivisorsArr(n){
-    let arr = [];
-    let srqtN = Math.sqrt(n);
-    for(let i=1;i<srqtN;i++){
-      if(n%i == 0){
-        arr.push(i);
-        arr.push(n/i);
-      }
-    }
-    if(Math.floor(srqtN) == srqtN){
-      arr.push(srqtN);
-    }
-    return arr.sort((a,b) => a-b);
-}
 
 //tests:
 
