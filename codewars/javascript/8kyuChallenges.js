@@ -3,6 +3,25 @@
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 /*
+
+	Complete the function that takes a non-negative integer 
+	n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n (inclusive).
+
+	Examples
+	n = 0  ==> [1]        # [2^0]
+	n = 1  ==> [1, 2]     # [2^0, 2^1]
+	n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
+
+*/
+
+
+function powersOfTwo(n){
+  return Array.apply(null, {length: n+1}).map((v,i) => Math.pow(2,i));
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
 	You take your son to the forest to see the monkeys. 
 	You know that there are a certain number there (n), 
 	but your son is too young to just appreciate the full number, 
@@ -90,6 +109,30 @@ function digitize(n) {
 function squareOrSquareRoot(array) {
   return array.map(val => Math.floor(Math.sqrt(val)) == Math.sqrt(val) ? Math.sqrt(val) : Math.pow(val,2))
 }
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	write me a function stringy that takes a size and returns a string of alternating '1s' and '0s'.
+
+	the string should start with a 1.
+
+	a string with size 6 should return :'101010'.
+
+	with size 4 should return : '1010'.
+
+	with size 12 should return : '101010101010'.
+
+	The size will always be positive and will only use whole numbers.
+
+*/
+
+
+function stringy(size) {
+  return Array.apply(null, {length: size}).map((v,i) => i%2 == 0 ? '1' : '0').join("");
+}
+
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 /*
@@ -741,3 +784,39 @@ function litres(time) {
 
 // mark the MrFreeze object instance as frozen
 Object.freeze(MrFreeze);
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	Create a function which answers the question "Are you playing banjo?".
+	If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+	The function takes a name as its only argument, and returns one of the following strings:
+
+	name + " plays banjo" 
+	name + " does not play banjo"
+	Names given are always valid strings.
+
+*/
+
+
+
+function areYouPlayingBanjo(name) {
+  return (name.toLowerCase()[0] == "r" ? `${name} plays ` : `${name} does not play `) + "banjo";
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	Get the number n (n>0) to return the reversed sequence from n to 1.
+
+	Example : n=5 >> [5,4,3,2,1]
+
+*/
+
+
+const reverseSeq = n => {
+  return Array.apply(null, {length: n}).map((v,i) => n-i);
+};
