@@ -19,6 +19,32 @@ function powersOfTwo(n){
   return Array.apply(null, {length: n+1}).map((v,i) => Math.pow(2,i));
 }
 
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	Description:
+	Remove all exclamation marks from sentence 
+	but ensure a exclamation mark at the end of string. 
+	For a beginner kata, you can assume that the input data 
+	is always a non empty string, no need to verify it.
+
+	Examples
+	remove("Hi!") === "Hi!"
+	remove("Hi!!!") === "Hi!"
+	remove("!Hi") === "Hi!"
+	remove("!Hi!") === "Hi!"
+	remove("Hi! Hi!") === "Hi Hi!"
+	remove("Hi") === "Hi!"
+
+*/
+
+
+function remove(s){
+  return s.replace(/!/g,"") + "!";
+}
+
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 /*
@@ -820,3 +846,37 @@ function areYouPlayingBanjo(name) {
 const reverseSeq = n => {
   return Array.apply(null, {length: n}).map((v,i) => n-i);
 };
+
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
+
+	Your Job
+	Find the sum of all multiples of n below m
+
+	Keep in Mind
+	n and m are natural numbers (positive integers)
+	m is excluded from the multiples
+	Examples
+	sumMul(2, 9)   ==> 2 + 4 + 6 + 8 = 20
+	sumMul(3, 13)  ==> 3 + 6 + 9 + 12 = 30
+	sumMul(4, 123) ==> 4 + 8 + 12 + ... = 1860
+	sumMul(4, -7)  ==> "INVALID"
+
+*/
+
+
+function sumMul(n,m){
+  let res = 0;
+  let counter = n;
+  while(counter < m){
+    res += counter;
+    counter += n;
+  }
+  
+  return n >= m ? "INVALID" : res;
+  
+}
+
+
