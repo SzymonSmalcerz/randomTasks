@@ -48,6 +48,26 @@ function remove(s){
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 /*
+
+	If you can't sleep, just count sheeps!!
+
+	Task:
+	Given a number, 3 for example, return a 
+	string with a murmur: "1 sheep...2 sheep...3 sheep..."
+
+	Note:
+	You will always receive a positive integer.
+
+*/
+
+
+var countSheep = function (num){
+  return Array.from(new Array(num),(val,index)=>index + 1 ).join(" sheep...") + " sheep...";
+}
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/*
 	You take your son to the forest to see the monkeys. 
 	You know that there are a certain number there (n), 
 	but your son is too young to just appreciate the full number, 
