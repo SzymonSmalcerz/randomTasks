@@ -4,7 +4,7 @@
 
 /*
 
-	Complete the function that takes a non-negative integer 
+	Complete the function that takes a non-negative integer
 	n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n (inclusive).
 
 	Examples
@@ -24,18 +24,18 @@ function powersOfTwo(n){
 /*
 
 
-	Your boss decided to save money by purchasing some 
-	cut-rate optical character recognition software for 
-	scanning in the text of old novels to your database. 
-	At first it seems to capture words okay, but you quickly 
+	Your boss decided to save money by purchasing some
+	cut-rate optical character recognition software for
+	scanning in the text of old novels to your database.
+	At first it seems to capture words okay, but you quickly
 	notice that it throws in a lot of numbers at random places in the text. For example:
 
 	stringClean('! !') == '! !'
 	stringClean('123456789') == ''
 	stringClean('This looks5 grea8t!') == 'This looks great!'
-	Your harried co-workers are looking to you for a solution 
-	to take this garbled text and remove all of the numbers. 
-	Your program will take in a string and clean out all numeric characters, 
+	Your harried co-workers are looking to you for a solution
+	to take this garbled text and remove all of the numbers.
+	Your program will take in a string and clean out all numeric characters,
 	and return a string with spacing and special characters ~#$%^&!@*():;"'.,? all intact.
 
 
@@ -52,9 +52,9 @@ function stringClean(s){
 /*
 
 	Description:
-	Remove all exclamation marks from sentence 
-	but ensure a exclamation mark at the end of string. 
-	For a beginner kata, you can assume that the input data 
+	Remove all exclamation marks from sentence
+	but ensure a exclamation mark at the end of string.
+	For a beginner kata, you can assume that the input data
 	is always a non empty string, no need to verify it.
 
 	Examples
@@ -100,7 +100,7 @@ function replace(s){
 	If you can't sleep, just count sheeps!!
 
 	Task:
-	Given a number, 3 for example, return a 
+	Given a number, 3 for example, return a
 	string with a murmur: "1 sheep...2 sheep...3 sheep..."
 
 	Note:
@@ -116,13 +116,13 @@ var countSheep = function (num){
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 /*
-	You take your son to the forest to see the monkeys. 
-	You know that there are a certain number there (n), 
-	but your son is too young to just appreciate the full number, 
+	You take your son to the forest to see the monkeys.
+	You know that there are a certain number there (n),
+	but your son is too young to just appreciate the full number,
 	he has to start counting them from 1.
 
-	As a good parent, you will sit and count with him. 
-	Given the number (n), populate an array with all 
+	As a good parent, you will sit and count with him.
+	Given the number (n), populate an array with all
 	numbers up to and including that number, but excluding zero.
 
 	For example, if n = 10:
@@ -137,13 +137,13 @@ function monkeyCount(n) {
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 /*
-	Character recognition software is widely used to digitise printed texts. 
+	Character recognition software is widely used to digitise printed texts.
 	Thus the texts can be edited, searched and stored on a computer.
 
-	When documents (especially pretty old ones written with a typewriter), 
+	When documents (especially pretty old ones written with a typewriter),
 	are digitised character recognition softwares often make mistakes.
 
-	Your task is correct the errors in the digitised text. You only 
+	Your task is correct the errors in the digitised text. You only
 	have to handle the following mistakes:
 
 	S is misinterpreted as 5
@@ -167,7 +167,7 @@ function correct(string)
 
 /*
 	altERnaTIng cAsE <=> ALTerNAtiNG CaSe
-	Define to_alternating_case(char*) such that each lowercase 
+	Define to_alternating_case(char*) such that each lowercase
 	letter becomes uppercase and each uppercase letter becomes lowercase.
 */
 
@@ -231,12 +231,12 @@ function stringy(size) {
 
 /*
 
-	In this kata you will have to write a function called fuelPrice 
-	(fuel_price in PHP, Python) that takes litres and pricePerLiter as arguments. 
-	Purchases of 2 or more litres get a discount of 5 cents per litre, purchases 
-	of 4 or more litres get a discount of 10 cents per litre, and so on every two 
-	litres, up to a maximum discount of 25 cents per litre. But total discount 
-	per liter cannot be more than 25 cents. round answer to 2 decimal places. 
+	In this kata you will have to write a function called fuelPrice
+	(fuel_price in PHP, Python) that takes litres and pricePerLiter as arguments.
+	Purchases of 2 or more litres get a discount of 5 cents per litre, purchases
+	of 4 or more litres get a discount of 10 cents per litre, and so on every two
+	litres, up to a maximum discount of 25 cents per litre. But total discount
+	per liter cannot be more than 25 cents. round answer to 2 decimal places.
 	Also you can guess that there will not be negative or non-numeric inputs.
 
 	!Good Luck!
@@ -286,7 +286,7 @@ const rps = (p1, p2) => {
 
 /*
 
-	Write a function that takes an array of strings as an argument 
+	Write a function that takes an array of strings as an argument
 	and returns a sorted array containing the same strings, ordered from shortest to longest.
 
 	For example, if this array were passed as an argument:
@@ -297,7 +297,7 @@ const rps = (p1, p2) => {
 
 	["Eyes", "Glasses", "Monocles", "Telescopes"]
 
-	All of the strings in the array passed to your function will be different lengths, 
+	All of the strings in the array passed to your function will be different lengths,
 	so you will not have to decide how to order multiple strings of the same length.
 
 */
@@ -328,7 +328,7 @@ function positiveSum(arr) {
 
 /*
 	Description:
-	Remove a exclamation mark from the end of string. For a beginner kata, 
+	Remove a exclamation mark from the end of string. For a beginner kata,
 	you can assume that the input data is always a string, no need to verify it.
 
 	Examples
@@ -395,10 +395,10 @@ function fakeBin(x){
 
 	Build a function that takes in two arguments (salary, bonus). Salary will be an integer, and bonus a boolean.
 
-	If bonus is true, the salary should be multiplied by 10. If bonus is false, 
+	If bonus is true, the salary should be multiplied by 10. If bonus is false,
 	the fatcat did not make enough money and must receive only his stated salary.
 
-	Return the total figure the individual will receive as a string prefixed with 
+	Return the total figure the individual will receive as a string prefixed with
 	"£" (= "\u00A3", JS and Java) or "$" (C#, C++, Ruby, Clojure, Elixir, PHP and Python).
 
 
@@ -434,7 +434,7 @@ function past(h, m, s){
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 /*
 
-	Consider an array of sheep where some sheep may be missing from their place. 
+	Consider an array of sheep where some sheep may be missing from their place.
 	We need a function that counts the number of sheep present in the array (true means present).
 
 	For example,
@@ -689,7 +689,7 @@ Can you help her?
 function greet(name){
   if(name === "Johnny")
     return "Hello, my love!";
-  
+
   return "Hello, " + name + "!";
 }
 
@@ -841,10 +841,10 @@ function switchItUp(number){
 
 	Nathan loves cycling.
 
-	Because Nathan knows it is important to stay 
+	Because Nathan knows it is important to stay
 	hydrated, he drinks 0.5 litres of water per hour of cycling.
 
-	You get given the time in hours and you need to 
+	You get given the time in hours and you need to
 	return the number of litres Nathan will drink, rounded to the smallest value.
 
 	For example:
@@ -869,7 +869,7 @@ function litres(time) {
 
 /*
 
-	There is an object/class already created called MrFreeze. 
+	There is an object/class already created called MrFreeze.
 	Mark this object as frozen so that no other changes can be made to it.
 
 */
@@ -888,7 +888,7 @@ Object.freeze(MrFreeze);
 
 	The function takes a name as its only argument, and returns one of the following strings:
 
-	name + " plays banjo" 
+	name + " plays banjo"
 	name + " does not play banjo"
 	Names given are always valid strings.
 
@@ -942,9 +942,27 @@ function sumMul(n,m){
     res += counter;
     counter += n;
   }
-  
+
   return n >= m ? "INVALID" : res;
-  
 }
 
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+/*
+
+  Order People by age Using Arrow Function
+  Sort and Order people by their age using Arrow Functions
+  Task
+  Your task is to order a list containg people objects by age using the new Javascript Arrow Functions
+  Input
+  Input will be a valid array with People objects containing an Age and Name
+  Output
+  Output will be a valid sorted array with People objects sorted by Age in ascending order
+  Reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+*/
+
+
+var OrderPeople = function(people){
+  return people.sort( (a,b) => a.age - b.age ); //complete this function
+}
